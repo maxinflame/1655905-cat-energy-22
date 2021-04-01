@@ -17,7 +17,7 @@
             <a href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a href="#">Каталог продукции</a>
+            <a href="catalog.html">Каталог продукции</a>
           </li>
           <li class="main-nav__item main-nav__item--current">
             <a href="#">Подбор программы</a>
@@ -27,74 +27,74 @@
     </header>
 
     <main>
-      <section class="form-section">
-        <h1 class="form-section__title">Подбор программы</h1>
-        <p class="form-section__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-        <form class="form-section__form form" action="https://echo.htmlacademy.ru" method="post">
+      <section class="wrapper">
+        <form class="form" action="https://echo.htmlacademy.ru" method="post">
+          <h1 class="title">Подбор программы</h1>
+          <p class="form__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
           <fieldset class="form__fieldset form__fieldset--bio">
-            <label class="text-label">
+            <label class="form__text-label">
               Имя:*
-              <input type="text" name="name">
+              <input class="form__text-input" type="text" name="name">
             </label>
-            <label class="text-label">
+            <label class="form__text-label">
               Вес(кг):*
-              <input type="text" name="weight">
+              <input class="form__text-input" type="text" name="weight">
             </label>
-            <label class="text-label">
+            <label class="form__text-label">
               Возраст(лет):
-              <input type="text" name="age">
+              <input class="form__text-input" type="text" name="age">
             </label>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset--program">
-            <label class="choose-label">
-              <input type="radio" value="weight-loss" name="program">
+            <label class="form__choose-label form__choose-label--radio">
+              <input class="form__input-radio" type="radio" value="weight-loss" name="program">
               Похудение
             </label>
-            <label class="choose-label">
-              <input type="radio" value="weight-gain" name="program">
+            <label class="form__choose-label form__choose-label--radio">
+              <input class="form__input-radio" type="radio" value="weight-gain" name="program">
               Набор массы
             </label>
-            <label class="choose-label">
-              <input type="radio" value="advice" name="program">
+            <label class="form__choose-label form__choose-label--radio">
+              <input class="form__input-radio" type="radio" value="advice" name="program">
               Не знаю (Нужен ваш совет)
             </label>
           </fieldset>
-          <fieldset class="form__fieldset form__fieldset--with-legend">
-            <legend class="fieldset-legend">Контактные данные (владельца кота)</legend>
-            <label class="text-label">
+          <fieldset class="form__fieldset">
+            <legend class="line-title">Контактные данные (владельца кота)</legend>
+            <label class="form__text-label">
               E-mail:*
-              <input type="email" name="email">
+              <input class="form__input-radio" type="email" name="email">
             </label>
-            <label class="text-label">
+            <label class="form__text-label">
               Телефон:*
-              <input type="phone" name="phone">
+              <input class="form__input-phone" type="phone" name="phone">
             </label>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset--with-legend">
-            <legend class="fieldset-legend">Комментарий</legend>
-            <input type="text" name="comment">
+            <legend class="line-title">Комментарий</legend>
+            <input class="form__input-comment" type="text" name="comment">
           </fieldset>
-          <fieldset class="form__fieldset form__fieldset--with-legend">
-            <legend class="fieldset-legend">Дополнительно</legend>
-            <label class="choose-label">
-              <input type="checkbox" name="sweetener" checked>
+          <fieldset class="form__fieldset">
+            <legend class="line-title">Дополнительно</legend>
+            <label class="form__choose-label form__choose-label--check">
+              <input class="form__input-check" type="checkbox" name="sweetener" checked>
               Сахарозаменитель
             </label>
-            <label class="choose-label">
-              <input type="checkbox" name="water">
+            <label class="form__choose-label form__choose-label--check">
+              <input class="form__input-check" type="checkbox" name="water">
               Питьевая вода
             </label>
-            <label class="choose-label">
-              <input type="checkbox" name="milk">
+            <label class="form__choose-label form__choose-label--check">
+              <input class="form__input-check" type="checkbox" name="milk">
               Молоко
             </label>
-            <label class="choose-label">
-              <input type="checkbox" name="Vitamins">
+            <label class="form__choose-label form__choose-label--check">
+              <input class="form__input-check" type="checkbox" name="vitamins">
               Витамины
             </label>
           </fieldset>
           <button class="button form__button" type="submit">Отправить заявку</button>
-          <p class="form-annotation">* — Обязательные поля</p>
+          <p class="form__annotation">* — Обязательные поля</p>
         </form>
       </section>
     </main>
@@ -102,8 +102,8 @@
     <footer class="page-footer">
       <section class="page-footer__map map">
         <div class="map__caption">
-          <p class="caption-welcome">Приглашаем к сотрудничеству дилеров!</p>
-          <p class="caption-address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <p class="map__welcome">Приглашаем к сотрудничеству дилеров!</p>
+          <address class="map__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
         </div>
         <h2 class="visually-hidden">Cat Energy на карте</h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253323!2d30.320858715841602!3d59.93871648187622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1616794111304!5m2!1sru!2sru"></iframe>
