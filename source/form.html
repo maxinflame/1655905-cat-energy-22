@@ -13,75 +13,97 @@
       <nav class="main-nav">
         <button class="main-nav__open-button">Открыть меню</button>
         <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="catalog.html">Каталог продукции</a>
+          </li>
           <li class="main-nav__item main-nav__item--current">
-            <a href="#">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#">Каталог продукции</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="form.html">Подбор программы</a>
+            <a href="#">Подбор программы</a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main class="page-main">
-      <section class="promo">
-        <h1 class="promo__title">Функциональное питание для котов</h1>
-        <p class="promo__slogan">Занялся собой? Займись котом!</p>
-        <img src="img/index-can-mobile.png">
-        <a class="promo__button" href="#">Подобрать программу</a>
-      </section>
-      <section class="programs-list">
-        <h2 class="visually-hidden">Каталоги программ</h2>
-        <div class="programs-item programs-item--weight-loss">
-          <h3 class="programs-item__title">Похудение</h3>
-          <p class="programs-item__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <a class="programs-item__link" href="#">Каталог slim</a>
-        </div>
-        <div class="programs-item programs-item--weight-gain">
-          <h3 class="programs-item__title">Набор массы</h3>
-          <p class="programs-item__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-          <a class="programs-item__link" href="#">Каталог pro</a>
-        </div>
-      </section>
-      <section class="guide">
-        <h2 class="guide__title">Как это работает</h2>
-        <ul class="guide__list">
-          <li class="guide__item guide__item--healthy">Функциональное питание содержит только полезные питательные вещества.</li>
-          <li class="guide__item guide__item--powder">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
-          <li class="guide__item guide__item--food">Замените один-два приема обычной еды на наше функциональное питание.</li>
-          <li class="guide__item guide__item--time">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
-        </ul>
-      </section>
-      <section class="example">
-        <h2 class="example__title">Живой пример</h2>
-        <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <ul class="result">
-          <li class="result__item">
-            <p class="result__value">5 кг</p>
-            <p class="result__caption">Снижение веса</p>
-          </li>
-          <li class="result__item">
-            <p class="result__value">60 дней</p>
-            <p class="result__caption">Затрачено времени</p>
-          </li>
-        </ul>
-        <p class="example__price">Затраты на питание: 15 000 РУБ.</p>
-        <img src="img/before-mobile.jpg">
-        <div class="slider">
-          <button class="slider__button">Было</button>
-          <button class="slider__button">Стало</button>
-        </div>
+    <main>
+      <section class="wrapper">
+        <form class="form" action="https://echo.htmlacademy.ru" method="post">
+          <h1 class="title">Подбор программы</h1>
+          <p class="form__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+          <fieldset class="form__fieldset form__fieldset--bio">
+            <label class="form__text-label">
+              Имя:*
+              <input class="form__text-input" type="text" name="name">
+            </label>
+            <label class="form__text-label">
+              Вес(кг):*
+              <input class="form__text-input" type="text" name="weight">
+            </label>
+            <label class="form__text-label">
+              Возраст(лет):
+              <input class="form__text-input" type="text" name="age">
+            </label>
+          </fieldset>
+          <fieldset class="form__fieldset form__fieldset--program">
+            <label class="form__choose-label form__choose-label--radio">
+              <input class="form__input-radio" type="radio" value="weight-loss" name="program">
+              Похудение
+            </label>
+            <label class="form__choose-label form__choose-label--radio">
+              <input class="form__input-radio" type="radio" value="weight-gain" name="program">
+              Набор массы
+            </label>
+            <label class="form__choose-label form__choose-label--radio">
+              <input class="form__input-radio" type="radio" value="advice" name="program">
+              Не знаю (Нужен ваш совет)
+            </label>
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <legend class="line-title">Контактные данные (владельца кота)</legend>
+            <label class="form__text-label">
+              E-mail:*
+              <input class="form__input-radio" type="email" name="email">
+            </label>
+            <label class="form__text-label">
+              Телефон:*
+              <input class="form__input-phone" type="phone" name="phone">
+            </label>
+          </fieldset>
+          <fieldset class="form__fieldset form__fieldset--with-legend">
+            <legend class="line-title">Комментарий</legend>
+            <input class="form__input-comment" type="text" name="comment">
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <legend class="line-title">Дополнительно</legend>
+            <label class="form__choose-label form__choose-label--check">
+              <input class="form__input-check" type="checkbox" name="sweetener" checked>
+              Сахарозаменитель
+            </label>
+            <label class="form__choose-label form__choose-label--check">
+              <input class="form__input-check" type="checkbox" name="water">
+              Питьевая вода
+            </label>
+            <label class="form__choose-label form__choose-label--check">
+              <input class="form__input-check" type="checkbox" name="milk">
+              Молоко
+            </label>
+            <label class="form__choose-label form__choose-label--check">
+              <input class="form__input-check" type="checkbox" name="vitamins">
+              Витамины
+            </label>
+          </fieldset>
+          <button class="button form__button" type="submit">Отправить заявку</button>
+          <p class="form__annotation">* — Обязательные поля</p>
+        </form>
       </section>
     </main>
 
     <footer class="page-footer">
       <section class="page-footer__map map">
         <div class="map__caption">
-          <p class="caption-welcome">Приглашаем к сотрудничеству дилеров!</p>
-          <p class="caption-address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <p class="map__welcome">Приглашаем к сотрудничеству дилеров!</p>
+          <address class="map__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
         </div>
         <h2 class="visually-hidden">Cat Energy на карте</h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253323!2d30.320858715841602!3d59.93871648187622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1616794111304!5m2!1sru!2sru"></iframe>
@@ -144,6 +166,5 @@
         </div>
       </div>
     </footer>
-
   </body>
-</html>
+  </html>
