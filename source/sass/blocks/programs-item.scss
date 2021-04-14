@@ -1,0 +1,40 @@
+.programs-item {
+  background-color: $basic-grey;
+  background-repeat: no-repeat;
+  padding-top: 30px;
+  padding-bottom: 22px;
+  margin-bottom: 20px;
+}
+
+.programs-item--weight-loss {
+  background-image: url("../img/cat-slim.svg");
+  background-position: 22px 21px;
+}
+
+.programs-item--weight-gain {
+  background-image: url("../img/cat-bodybuilder.svg");
+  background-position: 13px 24px;
+}
+
+.programs-item__title {
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  color: $basic-black;
+  margin: 0px;
+  margin-left: 71px;
+  margin-bottom: 29px;
+}
+
+.programs-item__description {
+  font-family: arial;
+  padding-bottom: 23px;
+  margin: 0;
+}
+
+.programs-item__link {
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+}

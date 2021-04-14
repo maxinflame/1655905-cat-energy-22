@@ -1,0 +1,40 @@
+.result {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 34px;
+}
+
+.result__item {
+  display: block;
+  text-align: center;
+  position: relative;
+  height: 56px;
+  width: 124px;
+  border: 1px solid $special-grey;
+  border-radius: 3px;
+  padding-top: 15px;
+  box-sizing: border-box;
+}
+
+.result__value {
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $basic-black;
+  margin: 0;
+}
+
+.result__caption {
+  text-transform: lowercase;
+  background-color: $background-color;
+  font-family: Arial;
+  font-size: 12px;
+  line-height: 12px;
+  position: absolute;
+  margin: 0px;
+  bottom: -16px;
+  left: 50%;
+  transform: translate(-50%);
+}

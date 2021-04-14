@@ -1,0 +1,26 @@
+.example {
+  background-color: $background-color;
+  padding-top: 27px;
+}
+
+.example__title {
+  line-height: 40px;
+  margin-bottom: 33px;
+}
+
+.example__text {
+  font-family: Arial;
+  margin: 0px;
+}
+
+.example__wrapper {
+  text-align: center;
+}
+
+.example__price {
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 20px;
+  color: $basic-black;
+  margin-bottom: 42px;
+}
