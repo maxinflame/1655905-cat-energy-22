@@ -29,11 +29,11 @@
 .result__caption {
   text-transform: lowercase;
   background-color: $background-color;
-  font-family: Arial;
+  font-family: "Arial";
   font-size: 12px;
   line-height: 12px;
   position: absolute;
-  margin: 0px;
+  margin: 0;
   bottom: -16px;
   left: 50%;
   transform: translate(-50%);
