@@ -2,15 +2,16 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="page-header">
-      <a class="page-header__logo">
-        <img src="img/logo-mobile.svg">
+    <header class="page-header container">
+      <a class="page-header__wrapper">
+        <img src="img/logo-mobile.svg" width="34px" height="38px">
+        <img class="page-header__title" src="img/header-title.svg" width="101px" height="18px">
       </a>
-      <img class="page-header__title" src="img/header-title.svg">
       <nav class="main-nav">
         <button class="main-nav__open-button">Открыть меню</button>
         <ul class="main-nav__list">
@@ -31,17 +32,17 @@
       <section class="promo container">
         <h1 class="title promo__title">Функциональное питание для котов</h1>
         <p class="promo__slogan">Занялся собой? Займись котом!</p>
-        <img src="img/index-can-mobile.png">
-        <a class="promo__button button" href="#">Подобрать программу</a>
+        <img class="promo__img" src="img/index-can-mobile.png">
+        <a class="button promo__button" href="#">Подобрать программу</a>
       </section>
       <section class="programs-list container">
         <h2 class="visually-hidden">Каталоги программ</h2>
-        <div class="programs-item programs-item--weight-loss container">
+        <div class="programs-item programs-item--weight-loss">
           <h3 class="programs-item__title">Похудение</h3>
           <p class="programs-item__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           <a class="programs-item__link" href="#">Каталог slim</a>
         </div>
-        <div class="programs-item programs-item--weight-gain container">
+        <div class="programs-item programs-item--weight-gain">
           <h3 class="programs-item__title">Набор массы</h3>
           <p class="programs-item__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
           <a class="programs-item__link" href="#">Каталог pro</a>
@@ -57,26 +58,30 @@
         </ul>
       </section>
       <section class="example">
-        <div class="container">
-          <h2 class="title example__title">Живой пример</h2>
-          <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <ul class="result">
-            <li class="result__item">
-              <p class="result__value">5 кг</p>
-              <p class="result__caption">Снижение веса</p>
-            </li>
-            <li class="result__item">
-              <p class="result__value">60 дней</p>
-              <p class="result__caption">Затрачено времени</p>
-            </li>
-          </ul>
-        </div>
-        <div class="example__wrapper">
-          <p class="example__price">Затраты на питание: 15 000 РУБ.</p>
-          <img src="img/before-mobile.png">
-          <div class="slider">
-            <button class="slider__button">Было</button>
-            <button class="slider__button">Стало</button>
+        <div class="container example__container">
+          <div class="example__stats-wrapper">
+            <h2 class="title example__title">Живой пример</h2>
+            <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <div class="example__stats">
+              <ul class="result">
+                <li class="result__item">
+                  <p class="result__value">5 кг</p>
+                  <p class="result__caption">Снижение веса</p>
+                </li>
+                <li class="result__item">
+                  <p class="result__value">60 дней</p>
+                  <p class="result__caption">Затрачено времени</p>
+                </li>
+              </ul>
+              <p class="example__price">Затраты на питание: 15 000 РУБ.</p>
+            </div>
+          </div>
+          <div class="example__before-after">
+            <img src="img/before-mobile.png">
+            <div class="slider">
+              <button class="slider__button">Было</button>
+              <button class="slider__button">Стало</button>
+            </div>
           </div>
         </div>
       </section>
@@ -84,9 +89,11 @@
 
     <footer class="page-footer">
       <section class="page-footer__map map">
-        <div class="map__caption container">
-          <p class="map__welcome">Приглашаем к сотрудничеству дилеров!</p>
-          <address class="map__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <div class="container">
+          <div class="map__caption">
+            <p class="map__welcome">Приглашаем к сотрудничеству дилеров!</p>
+            <address class="map__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+          </div>
         </div>
         <h2 class="visually-hidden">Cat Energy на карте</h2>
         <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253323!2d30.320858715841602!3d59.93871648187622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1616794111304!5m2!1sru!2sru" frameborder="0"></iframe>
