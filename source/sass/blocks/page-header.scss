@@ -1,16 +1,20 @@
 .page-header {
+  color: $basic-black;
+
+  &--index {
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      color: $basic-white;
+      width: 1220px;
+      left: 50%;
+      transform: translate(-50%);
+      z-index: 1;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
-  }
-
-  @media (min-width: $desktop-width) {
-    position: absolute;
-    z-index: 1;
-    color: $basic-white;
-    width: 1220px;
-    left: 50%;
-    transform: translate(-50%);
   }
 }
 

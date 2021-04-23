@@ -1,0 +1,20 @@
+.adv {
+  background-image: url("../img/gift-photo.jpg");
+  background-repeat: no-repeat;
+  height: 289px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 186px;
+  box-sizing: border-box;
+}
+
+.adv__text {
+  color: $basic-white;
+  font-family: "Arial";
+  font-size: 16px;
+  line-height: 20px;
+  max-width: 161px;
+  text-align: center;
+  margin: 0;
+}
