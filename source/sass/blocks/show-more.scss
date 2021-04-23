@@ -1,0 +1,22 @@
+.show-more {
+  text-align: center;
+  padding: 25px 0;
+}
+
+.show-more__title {
+  font-size: 16px;
+  line-height: 20px;
+  color: $welcome-color;
+  text-transform: uppercase;
+}
+
+.show-more__text {
+  font-family: "Arial";
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.show-more__button {
+  color: $special-dark-grey;
+  background-color: $basic-grey;
+}

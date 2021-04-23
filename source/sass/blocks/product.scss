@@ -1,0 +1,17 @@
+.product__title {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: $special-dark-grey-2;
+}
+
+.product__table {
+  font-family: "Arial";
+  font-size: 12px;
+  line-height: 16px;
+
+  & td:last-child {
+    text-align: right;
+  }
+}
