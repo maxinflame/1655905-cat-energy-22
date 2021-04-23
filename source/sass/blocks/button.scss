@@ -1,7 +1,9 @@
 .button {
   background-color: $basic-green;
   color: $basic-white;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 40px;
   width: 100%;
   border: none;

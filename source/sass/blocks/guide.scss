@@ -6,6 +6,15 @@
   list-style: none;
   padding: 0;
   font-family: "Arial";
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .guide__item {
@@ -16,22 +25,31 @@
   flex-direction: column;
   justify-content: center;
   margin-bottom: 20px;
-}
+  box-sizing: border-box;
 
-.guide__item--healthy {
-  background-image: url("../img/healthy.svg");
-}
+  &--healthy {
+    background-image: url("../img/healthy.svg");
+  }
 
-.guide__item--powder {
-  background-image: url("../img/powder.svg");
-}
+  &--powder {
+    background-image: url("../img/powder.svg");
+  }
 
-.guide__item--food {
-  background-image: url("../img/food.svg");
-}
+  &--food {
+    background-image: url("../img/food.svg");
+  }
 
-.guide__item--time {
-  background-image: url("../img/time.svg");
+  &--time {
+    background-image: url("../img/time.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 246px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 230px;
+  }
 }
 
 .guide__text {

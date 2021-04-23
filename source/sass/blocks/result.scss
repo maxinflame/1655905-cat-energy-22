@@ -4,6 +4,10 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+  }
 }
 
 .result__item {

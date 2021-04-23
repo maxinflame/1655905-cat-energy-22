@@ -4,6 +4,16 @@
   background-size: 100% 302px;
   text-align: center;
   padding-top: 27px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    min-height: 810px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 141px;
+    text-align: left;
+  }
 }
 
 .promo__title {
@@ -16,4 +26,21 @@
   line-height: 14px;
   color: $basic-white;
   text-transform: uppercase;
+}
+
+.promo__img {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    width: 709px;
+    height: 609px;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0;
+  }
+}
+
+.promo__button {
+  @media (min-width: $tablet-width) {
+    width: 244px;
+  }
 }

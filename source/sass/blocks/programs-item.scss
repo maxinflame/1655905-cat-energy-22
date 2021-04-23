@@ -1,19 +1,25 @@
 .programs-item {
   background-color: $basic-grey;
   background-repeat: no-repeat;
+  padding: 20px;
   padding-top: 30px;
   padding-bottom: 22px;
   margin-bottom: 20px;
-}
+  box-sizing: border-box;
 
-.programs-item--weight-loss {
-  background-image: url("../img/cat-slim.svg");
-  background-position: 22px 21px;
-}
+  &--weight-loss {
+    background-image: url("../img/cat-slim.svg");
+    background-position: 22px 21px;
+  }
 
-.programs-item--weight-gain {
-  background-image: url("../img/cat-bodybuilder.svg");
-  background-position: 13px 24px;
+  &--weight-gain {
+    background-image: url("../img/cat-bodybuilder.svg");
+    background-position: 13px 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 570px;
+  }
 }
 
 .programs-item__title {
