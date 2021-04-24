@@ -1,15 +1,33 @@
+.additional-item {
+  height: 130px;
+  box-sizing: border-box;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 325px 1fr 244px;
+    height: 72px;
+  }
+}
+
 .additional-item__title {
   font-size: 16px;
   line-height: 16px;
   color: $special-dark-grey-2;
   font-weight: 400;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 13px;
 }
 
 .additional-item__table {
   font-size: 14px;
   line-height: 14px;
   width: 100%;
+  margin-bottom: 15px;
+
+  & td {
+    padding: 0;
+  }
 
   & td:last-child {
     text-align: right;

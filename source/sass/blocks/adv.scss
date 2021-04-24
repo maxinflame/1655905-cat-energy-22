@@ -1,17 +1,24 @@
 .adv {
   background-image: url("../img/gift-photo.jpg");
   background-repeat: no-repeat;
+  background-size: 100% 289px;
   height: 289px;
   text-align: center;
   display: flex;
   justify-content: center;
   padding-top: 186px;
   box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 35px;
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+  }
 }
 
 .adv__text {
   color: $basic-white;
-  font-family: "Arial";
+  font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
   max-width: 161px;
