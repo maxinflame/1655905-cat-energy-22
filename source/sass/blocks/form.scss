@@ -12,34 +12,54 @@
   margin-bottom: 39px;
 }
 
+.form__program-selection {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .form__fieldset {
   border: none;
   padding: 0;
   margin: 0;
+
+  &--bio {
+    padding-bottom: 24px;
+
+    @media (min-width: $desktop-width) {
+      width: 569px;
+    }
+  }
+
+  &--program {
+    padding: 22px 0 19px 0;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $desktop-width) {
+      width: 568px;
+    }
+  }
+
+  &--contacts {
+    padding-bottom: 24px;
+  }
+
+  &--comment {
+    padding-bottom: 23px;
+  }
+
+  &--additional {
+    padding-bottom: 34px;
+  }
 }
 
-.form__fieldset--bio {
-  padding-bottom: 24px;
-}
-
-.form__fieldset--program {
-  padding: 22px 0 19px 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.form__fieldset--contacts {
-  padding-bottom: 24px;
-}
-
-.form__fieldset--comment {
-  padding-bottom: 23px;
-}
-
-.form__fieldset--additional {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 34px;
+.form__contacts-wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .form__text-label {
@@ -47,6 +67,12 @@
   font-size: 16px;
   display: flex;
   align-items: center;
+
+  &--contacts {
+    @media (min-width: $desktop-width) {
+      width: 570px;
+    }
+  }
 }
 
 .form__text-label:not(:last-child) {
@@ -81,6 +107,16 @@
   font-size: 16px;
   line-height: 20px;
   margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    width: 282px;
+    margin-right: 61px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 568px;
+    margin-right: 81px;
+  }
 }
 
 .form__annotation {
@@ -88,4 +124,11 @@
   font-family: "Arial";
   text-align: center;
   margin: 0;
+}
+
+.form__submit {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: baseline;
+  }
 }
