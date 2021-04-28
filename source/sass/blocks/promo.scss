@@ -1,13 +1,35 @@
 .promo {
+  width: 100%;
+  background: linear-gradient(to right, #65a83d, #62a53a) no-repeat;
+  background-size: 100% 302px;
+
+  @media (min-width: $tablet-width) {
+    background: transparent;
+  }
+
+  @media (min-width: $desktop-width) {
+    background: url("../img/index-background-desktop.jpg") no-repeat right top, linear-gradient(to left, #64a83c 50%, transparent 50%, transparent) no-repeat;
+    height: 696px;
+  }
+}
+
+.promo__wrapper {
   background-image: url("../img/index-background-mobile.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 302px;
+  background-size: 320px 302px, 100% 302px;
+  background-position: center top;
   text-align: center;
   padding-top: 27px;
   position: relative;
+  color: $basic-white;
+  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    min-height: 810px;
+    min-height: 872px;
+    color: $basic-black;
+    text-align: left;
+    background: transparent;
+    padding: 62px 87px 0 87px;
   }
 
   @media (min-width: $desktop-width) {
@@ -17,25 +39,46 @@
 }
 
 .promo__title {
-  color: $basic-white;
   margin-bottom: 25px;
+  color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    color: $basic-black;
+    max-width: 414px;
+    margin-bottom: 41px;
+  }
 }
 
 .promo__slogan {
   font-size: 14px;
   line-height: 14px;
-  color: $basic-white;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 49px;
+  }
 }
 
 .promo__img {
   @media (min-width: $tablet-width) {
     position: absolute;
+    z-index: -1;
     width: 709px;
     height: 609px;
     left: 50%;
     transform: translate(-50%);
     bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 141px;
+    transform: none;
+    left: 448px;
+    z-index: 0;
+    width: 552px;
+    height: 499px;
   }
 }
 

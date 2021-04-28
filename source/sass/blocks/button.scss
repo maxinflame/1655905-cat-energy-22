@@ -9,4 +9,12 @@
   border: none;
   font-family: "Oswald", "arial", sans-serif;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: $basic-green-2;
+  }
+
+  &:active {
+    color: $opacity-white;
+  }
 }

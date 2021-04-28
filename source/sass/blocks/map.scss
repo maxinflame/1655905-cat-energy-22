@@ -8,7 +8,7 @@
   padding: 28px 0;
 
   @media (min-width: $tablet-width) {
-    padding: 62px 71px;
+    padding: 62px 40px;
   }
 
   @media (min-width: $desktop-width) {
@@ -39,7 +39,18 @@
 .map__address {
   font-family: "Arial", sans-serif;
   font-style: normal;
-  max-width: 140px;
+  max-width: 160px;
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    text-align: right;
+  }
+}
+
+.map__city {
+  @media (min-width: $tablet-width) {
+    position: relative;
+    top: 20px;
+  }
 }
 
 .map__iframe {

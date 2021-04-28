@@ -6,7 +6,8 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding-top: 55px
+    padding-top: 55px;
+    padding-bottom: 30px;
   }
 }
 
@@ -17,14 +18,35 @@
   text-align: center;
   box-sizing: border-box;
 
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    @include underline($underline-color);
+  }
+
   @media (min-width: $tablet-width) {
     text-align: left;
     padding: 0;
+    min-height: auto;
   }
 }
 
 .page-footer__contacts {
   min-height: 63px;
+
+  @media (max-width: $mobile-width-only) {
+    @include underline($underline-color);
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: auto;
+  }
 }
 
 .page-footer__socials-list {
@@ -34,16 +56,45 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    position: relative;
+    top: -5px;
+  }
 }
 
-.page-footer__socials-item:not(:last-child) {
-  margin-right: 33px;
+.page-footer__socials-item{
+  &:hover {
+    & path {
+      stroke: $basic-green;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:not(:last-child) {
+    margin-right: 33px;
+  }
 }
 
 .page-footer__copyright-link {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &:hover {
+    & path {
+      fill: $basic-green;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     align-items: stretch;
@@ -59,6 +110,9 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: flex-end;
+    position: relative;
+    top: -5px;
+    min-height: auto;
   }
 }
 

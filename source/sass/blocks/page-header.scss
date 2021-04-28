@@ -15,10 +15,12 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 24px;
   }
 }
 
-.page-header__wrapper {
+.page-header__wrapper-logo {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -26,8 +28,17 @@
   height: 66px;
   padding-right: 34px;
 
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   @media (min-width: $tablet-width) {
     width: 174px;
+    height: 52px;
     padding: 0;
   }
 
