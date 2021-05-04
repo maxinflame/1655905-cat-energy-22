@@ -66,18 +66,28 @@
 }
 
 .page-footer__socials-item{
-  &:hover {
-    & path {
-      stroke: $basic-green;
-    }
-  }
-
   &:active {
     opacity: 0.3;
   }
 
   &:not(:last-child) {
     margin-right: 33px;
+  }
+}
+
+.page-footer__socials-item:not(.page-footer__socials-item--facebook) {
+  &:hover {
+    & path {
+      fill: $basic-green;
+    }
+  }
+}
+
+.page-footer__socials-item--facebook {
+  &:hover {
+    & path {
+      stroke: $basic-green;
+    }
   }
 }
 

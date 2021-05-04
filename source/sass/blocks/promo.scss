@@ -67,8 +67,7 @@
     z-index: -1;
     width: 709px;
     height: 609px;
-    left: 50%;
-    transform: translate(-50%);
+    @include absolute-center-x;
     bottom: 0;
   }
 

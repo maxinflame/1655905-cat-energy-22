@@ -1,15 +1,29 @@
 .form {
+  padding-top: 27px;
   padding-bottom: 32px;
 }
 
 .form__title {
-  margin-bottom: 27px;
+  margin-bottom: 37px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+  }
 }
 
 .form__text {
   margin: 0;
   color: $basic-black;
   margin-bottom: 39px;
+  text-transform: uppercase;
+  max-width: 240px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 66px;
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 340px;
+  }
 }
 
 .form__program-selection {
@@ -21,33 +35,69 @@
 
 .form__fieldset {
   border: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 
   &--bio {
     padding-bottom: 24px;
 
+    @media (max-width: $mobile-width-only) {
+      @include underline($underline-color);
+
+      &::after {
+        width: 100vw;
+        left: -30px;
+      }
+    }
+
     @media (min-width: $desktop-width) {
       width: 569px;
+      padding: 0;
     }
   }
 
   &--program {
-    padding: 22px 0 19px 0;
+    margin: 0;
+    padding: 22px 19px;
     display: flex;
     flex-direction: column;
 
+    @media (max-width: $mobile-width-only) {
+      @include underline($underline-color);
+
+      &::after {
+        width: 100vw;
+        left: -30px;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      border: 1px solid $input-border-color;
+    }
+
     @media (min-width: $desktop-width) {
       width: 568px;
+      padding: 24px 27px;
     }
   }
 
   &--contacts {
+    margin-top: 35px;
     padding-bottom: 24px;
+    padding-left: 0;
+    padding-right: 0;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 65px;
+    }
   }
 
   &--comment {
-    padding-bottom: 23px;
+    padding: 0 0 23px 0;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 65px;
+    }
   }
 
   &--additional {
@@ -59,6 +109,7 @@
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
   }
 }
 
@@ -67,40 +118,176 @@
   font-size: 16px;
   display: flex;
   align-items: center;
+  white-space: nowrap;
+  position: relative;
 
   &--contacts {
     @media (min-width: $desktop-width) {
       width: 570px;
     }
   }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form__text-label:not(:last-child) {
   margin-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .form__text-input {
+  text-transform: uppercase;
   width: 100%;
   height: 45px;
   margin-left: 12px;
   box-sizing: border-box;
   border: $input-border-color 1px solid;
+  padding-left: 15px;
+
+  &::placeholder {
+    color: $special-dark-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 52px;
+  }
+
+  &:hover {
+    border-color: $special-grey;
+  }
+
+  &:focus {
+    border: $special-dark-grey 2px solid;
+    outline: none;
+  }
+}
+
+.form__text-input:focus + .form__input-icon--email {
+  stroke: $basic-green;
+}
+
+.form__text-input:focus + .form__input-icon--phone {
+  fill: $basic-green;
+}
+
+.form__input-icon {
+  position: absolute;
+  @include absolute-center-y;
+
+  &--email {
+    right: 16px;
+  }
+
+  &--phone {
+    right: 13px;
+  }
+}
+
+.form__choose-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form__choose-item {
+  height: 30px;
+
+  @media (min-width: $tablet-width) {
+    height: 40px;
+  }
+}
+
+.form__choose-item:not(:last-child) {
+  margin-bottom: 12px;
 }
 
 .form__choose-label {
   font-size: 16px;
   text-transform: uppercase;
   color: $special-dark-grey-2;
+  position: relative;
+
+  &--radio {
+    padding-left: 45px;
+
+    &::before {
+      content: "";
+      width: 14px;
+      height: 14px;
+      background-color: $basic-white;
+      border-radius: 50%;
+      box-shadow: 0 0 0 7px $basic-white, 0 0 0 8px $special-grey;
+      position: absolute;
+      left: 8px;
+      @include absolute-center-y;
+    }
+
+    @media (min-width: $tablet-width) {
+      &::before {
+        width: 18px;
+        height: 18px;
+        box-shadow: 0 0 0 11px $basic-white, 0 0 0 12px $special-grey;
+      }
+    }
+  }
+
+  &--check {
+    padding-left: 46px;
+
+    &::before {
+      content: "";
+      width: 30px;
+      height: 30px;
+      border: 1px solid $special-grey;
+      position: absolute;
+      @include absolute-center-y;
+      left: 0;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
-.form__choose-label:not(:last-child) {
-  margin-bottom: 12px;
+.form__input-radio:checked + .form__choose-label--radio::before {
+  background-color: $basic-green;
 }
 
 .form__input-comment {
   min-height: 150px;
   width: 100%;
   border: $input-border-color 1px solid;
+  padding: 9px 12px 15px 9px;
+
+  &::placeholder {
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 18px;
+    color: $special-dark-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 19px;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}
+
+.form__input-check:checked + .form__choose-label--check::before {
+  background: url("../img/check.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .form__button {

@@ -11,3 +11,13 @@
     background-color: $color;
   }
 }
+
+@mixin absolute-center-x {
+  left: 50%;
+  transform: translate(-50%);
+}
+
+@mixin absolute-center-y {
+  top: 50%;
+  transform: translateY(-50%);
+}
