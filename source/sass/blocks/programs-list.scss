@@ -1,6 +1,15 @@
 .programs-list {
+  padding-top: 22px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 80px;
+  }
+}
+
+.programs-list__wrapper {
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }

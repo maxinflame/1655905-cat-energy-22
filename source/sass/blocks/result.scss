@@ -3,10 +3,14 @@
   padding-left: 0;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 34px;
+  margin: 0 0 26px 0;
 
   @media (min-width: $tablet-width) {
     width: 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
   }
 }
 
@@ -20,6 +24,11 @@
   border-radius: 3px;
   padding-top: 15px;
   box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 162px;
+    height: 72px;
+  }
 }
 
 .result__value {
@@ -28,12 +37,17 @@
   text-transform: uppercase;
   color: $basic-black;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .result__caption {
   text-transform: lowercase;
   background-color: $background-color;
-  font-family: "Arial", sans-serif;;
+  font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 12px;
   position: absolute;
@@ -41,4 +55,13 @@
   bottom: -16px;
   left: 50%;
   transform: translate(-50%);
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    background-color: $basic-white;
+  }
 }

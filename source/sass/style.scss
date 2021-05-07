@@ -1,6 +1,7 @@
 @import "general/normalize.scss";
 @import "general/fonts.scss";
 @import "general/variables.scss";
+@import "general/mixins.scss";
 @import "general/global.scss";
 @import "blocks/container.scss";
 @import "blocks/title.scss";
@@ -12,6 +13,7 @@
 @import "blocks/programs-item.scss";
 @import "blocks/guide.scss";
 @import "blocks/example.scss";
+@import "blocks/slider.scss";
 @import "blocks/result.scss";
 @import "blocks/map.scss";
 @import "blocks/page-footer.scss";
