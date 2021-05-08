@@ -1,3 +1,19 @@
+.products {
+  @include underline($grey-button-hover);
+
+  &::after {
+    top: 0;
+    width: 100vw;
+    left: -20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      display: none;
+    }
+  }
+}
+
 .products__list {
   list-style: none;
   padding: 0;
@@ -17,12 +33,26 @@
 .products__item {
   min-height: 209px;
   box-sizing: border-box;
+  @include underline($grey-button-hover);
+
+  &::after {
+    width: 100vw;
+    left: -20px;
+  }
 
   @media (min-width: $tablet-width) {
     width: 324px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 59px;
 
     &:not(:nth-child(2n)) {
       margin-right: 60px;
+    }
+
+    &::after {
+      display: none;
     }
   }
 
