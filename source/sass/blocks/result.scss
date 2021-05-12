@@ -53,8 +53,7 @@
   position: absolute;
   margin: 0;
   bottom: -16px;
-  left: 50%;
-  transform: translate(-50%);
+  @include absolute-center-x;
 
   @media (min-width: $tablet-width) {
     font-size: 14px;

@@ -107,8 +107,7 @@
     height: 10px;
     position: absolute;
     right: -47px;
-    top: 50%;
-    transform: translateY(-50%);
+    @include absolute-center-y;
   }
 
   &:hover {

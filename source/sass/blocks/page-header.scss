@@ -6,8 +6,7 @@
       position: absolute;
       color: $basic-white;
       width: 1220px;
-      left: 50%;
-      transform: translate(-50%);
+      @include absolute-center-x;
       z-index: 1;
     }
   }

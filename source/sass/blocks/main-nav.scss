@@ -85,12 +85,6 @@
         bottom: 2px;
       }
     }
-
-    @media (min-width: $desktop-width) {
-      &::after {
-        background-color: $basic-white;
-      }
-    }
   }
 
   @media (min-width: $tablet-width) {
@@ -99,6 +93,16 @@
 
   @media (max-width: $mobile-width-only) {
     border-bottom: 1px solid $nav-border-color;
+  }
+}
+
+.main-nav--index {
+  .main-nav__item--current {
+    @media (min-width: $desktop-width) {
+      &::after {
+        background-color: $basic-white;
+      }
+    }
   }
 }
 

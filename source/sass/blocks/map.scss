@@ -18,6 +18,13 @@
     top: 95px;
     padding: 66px 76px 52px 76px;
   }
+
+  &--form {
+    @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
 }
 
 .map__caption--index {
@@ -31,6 +38,11 @@
   max-width: 140px;
   margin: 0;
 
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
   @media (min-width: $desktop-width) {
     margin-right: 87px;
   }
@@ -40,6 +52,12 @@
   font-family: "Arial", sans-serif;
   font-style: normal;
   max-width: 160px;
+  font-size: 14px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
 
   @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
     text-align: right;
