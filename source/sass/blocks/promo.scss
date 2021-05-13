@@ -10,6 +10,12 @@
   @media (min-width: $desktop-width) {
     background: url("../img/index-background-desktop.jpg") no-repeat right top, linear-gradient(to left, #64a83c 50%, transparent 50%, transparent) no-repeat;
     height: 696px;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/index-background-desktop@2x.jpg") no-repeat right top;
+      background-size: 50% 696px;
+      height: 696px;
+    }
   }
 }
 
@@ -23,6 +29,10 @@
   position: relative;
   color: $basic-white;
   box-sizing: border-box;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
 
   @media (min-width: $tablet-width) {
     min-height: 872px;
