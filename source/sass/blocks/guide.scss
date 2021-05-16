@@ -2,20 +2,26 @@
   margin-bottom: 42px;
 
   @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
-    padding-top: 45px;
-    padding-bottom: 47px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
 
     @include underline($nav-border-color);
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 71px;
+    padding-top: 25px;
+    margin-bottom: 35px;
   }
 }
 
 .guide__title {
   line-height: 40px;
   margin-bottom: 38px;
+
+  @media (min-width: $tablet-width) {
+    line-height: 60px;
+    margin-bottom: 32px;
+  }
 }
 
 .guide__list {
@@ -56,27 +62,56 @@
 
   &--healthy {
     background-image: url("../img/healthy.svg");
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/healthy-tablet.svg");
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: -7px;
+    }
   }
 
   &--powder {
     background-image: url("../img/powder.svg");
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/powder-tablet.svg");
+    }
   }
 
   &--food {
     background-image: url("../img/food.svg");
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/food-tablet.svg");
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 11px;
+    }
   }
 
   &--time {
     background-image: url("../img/time.svg");
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/time-tablet.svg");
+    }
+
+    @media (min-width: $desktop-width) {
+      position: relative;
+      right: 13px;
+    }
   }
 
   @media (min-width: $tablet-width) {
     width: 246px;
     height: 280px;
-    padding: 151px 0 0 0;
+    padding: 97px 0 0 0;
     background-position: 0 40px;
     background-size: 80px;
-    margin-bottom: 0;
+    margin-bottom: 37px;
   }
 
   @media (min-width: $desktop-width) {
@@ -104,4 +139,16 @@
 
 .guide__text {
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 245px;
+  }
+}
+
+.guide__line-break {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }

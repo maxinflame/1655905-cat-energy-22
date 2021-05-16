@@ -1,9 +1,17 @@
 .slider {
-  margin-top: 23px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 47px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -95px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -74px;
+    margin-left: 55px;
+  }
 }
 
 .slider__button {
@@ -11,6 +19,8 @@
   text-transform: uppercase;
   background: transparent;
   padding: 0;
+  font-size: 16px;
+  line-height: 20px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -37,12 +47,18 @@
   padding: 4px 6px;
   box-sizing: border-box;
   position: relative;
+  margin: 0 16px;
 
   @media (min-width: $tablet-width) {
     width: 60%;
     border: none;
     background-color: $slider-color;
     height: 6px;
+    margin: 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 428px;
   }
 }
 
@@ -58,14 +74,14 @@
 }
 
 .slider__toggle {
-  height: 6px;
-  width: 6px;
+  height: 8px;
+  width: 8px;
   border-radius: 50%;
   position: absolute;
   left: 49%;
   top: -12px;
   background-color: $basic-green;
-  border: 14px solid $basic-white;
+  border: 12px solid $basic-white;
   box-shadow: 0 0 0 1px $special-grey, 0px 1px 3px 0px $slider-toggle-shadow-color;
 
   &:hover {

@@ -39,11 +39,12 @@
     color: $basic-black;
     text-align: left;
     background: transparent;
-    padding: 62px 87px 0 87px;
+    padding: 62px 117px 0 117px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 141px;
+    padding-top: 217px;
+    padding-left: 80px;
     text-align: left;
   }
 }
@@ -63,6 +64,7 @@
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+  margin-bottom: 29px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -94,5 +96,11 @@
 .promo__button {
   @media (min-width: $tablet-width) {
     width: 244px;
+    height: 54px;
+    margin-left: -5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
   }
 }
