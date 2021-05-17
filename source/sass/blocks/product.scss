@@ -15,17 +15,26 @@
 .product__img-link {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 34px;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.product__img {
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
   }
 }
 
 .product__img--small {
-  width: 68px;
-  height: 86px;
+  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     width: 161px;
@@ -36,10 +45,43 @@
 .product__img--big {
   width: 84px;
   height: 101px;
+  margin-bottom: 12px;
 
   @media (min-width: $tablet-width) {
     width: 168px;
     height: 206px;
+  }
+}
+
+.product:nth-child(3) .product__img {
+  margin-bottom: 18px;
+}
+
+.product:nth-child(5) .product__img {
+  margin-bottom: 18px;
+}
+
+.product:nth-child(7) .product__img {
+  margin-bottom: 10px;
+  position: relative;
+  top: -9px;
+}
+
+.product:nth-child(7) .product__img-link {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 10px;
+  }
+}
+
+.product:nth-child(7) .product__title {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 16px;
+  }
+}
+
+.product:nth-child(7) .product__table {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 25px;
   }
 }
 
@@ -51,6 +93,7 @@
   color: $special-dark-grey-2;
   max-width: 76px;
   margin: 0;
+  margin-bottom: 16px;
 
   @media (min-width: $tablet-width) {
     text-align: center;
@@ -58,7 +101,7 @@
     font-size: 20px;
     line-height: 24px;
     max-width: 150px;
-    margin-bottom: 21px;
+    margin-bottom: 12px;
   }
 }
 
@@ -68,14 +111,15 @@
   line-height: 16px;
   width: 100%;
   border-collapse: collapse;
+  margin-bottom: 18px;
 
   & td {
     padding: 0;
-    border-bottom: 1px solid $special-grey;
 
     @media (min-width: $tablet-width) {
       padding-bottom: 9px;
       padding-top: 7px;
+      border-bottom: 1px solid $special-grey;
     }
   }
 
@@ -90,5 +134,8 @@
 }
 
 .product__button {
+  font-family: Oswald;
+  font-size: 16px;
+  line-height: 20px;
   grid-column: 1 / 3;
 }
