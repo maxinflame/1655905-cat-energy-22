@@ -1,6 +1,21 @@
 .show-more {
   text-align: center;
   padding: 25px 0;
+  padding-top: 78px;
+  background-image: url("../img/plus.svg");
+  background-repeat: no-repeat;
+  background-position: center 25px;
+
+  @media (min-width: $tablet-width) {
+    border: 2px solid $basic-grey;
+    box-sizing: border-box;
+    height: 429px;
+    background-position: center 52px;
+    padding-top: 161px;
+    display: flex;
+    flex-direction: column;
+    padding: 161px 38px 29px 38px;
+  }
 }
 
 .show-more__title {
@@ -8,15 +23,42 @@
   line-height: 20px;
   color: $welcome-color;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 8px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+    max-width: 140px;
+    margin: 0 auto 23px auto;
+  }
 }
 
 .show-more__text {
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 16px;
+  margin: 0;
+  margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+    max-width: 170px;
+    margin: 0 auto;
+  }
 }
 
 .show-more__button {
   color: $special-dark-grey;
   background-color: $basic-grey;
+  margin-top: auto;
+
+  &:hover {
+    background-color: $grey-button-hover;
+  }
+
+  &:active {
+    color: $grey-button-active;
+  }
 }
