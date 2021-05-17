@@ -16,7 +16,7 @@
     z-index: 1;
     background-color: $basic-white;
     top: 95px;
-    padding: 66px 76px 52px 76px;
+    padding: 66px 89px 52px 76px;
   }
 
   &--form {
@@ -47,7 +47,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 87px;
+    margin-right: 80px;
   }
 }
 
@@ -78,7 +78,7 @@
   width: 100vw;
   height: 362px;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     height: 400px;
   }
 }
