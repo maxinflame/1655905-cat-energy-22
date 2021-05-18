@@ -45,7 +45,23 @@
   }
 }
 
+.page-header__logo {
+  @media (min-width: $tablet-width) {
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
+    height: 59px;
+  }
+}
+
 .page-header__title {
   margin-left: auto;
   margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }

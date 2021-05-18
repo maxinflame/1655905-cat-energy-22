@@ -19,6 +19,7 @@
 }
 
 .guide__list {
+  counter-reset: guide-counter;
   list-style: none;
   padding: 0;
   font-family: "Arial", sans-serif;
@@ -81,21 +82,23 @@
   @media (min-width: $desktop-width) {
     width: 230px;
   }
-}
 
-.guide__number {
-  position: absolute;
-  z-index: -1;
-  font-family: "Oswald", "arial", sans-serif;
-  font-size: 280px;
-  line-height: 280px;
-  color: $basic-grey;
-  top: 0;
-  left: 113px;
-  margin: 0;
+  &::before {
+    counter-increment: guide-counter 1;
+    content: counter(guide-counter) "";
+    position: absolute;
+    z-index: -1;
+    font-family: "Oswald", "arial", sans-serif;
+    font-size: 280px;
+    line-height: 280px;
+    color: $basic-grey;
+    top: 0;
+    left: 113px;
+    margin: 0;
 
-  @media (max-width: $mobile-width-only) {
-    display: none;
+    @media (max-width: $mobile-width-only) {
+      display: none;
+    }
   }
 }
 
