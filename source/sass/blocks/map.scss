@@ -6,6 +6,7 @@
   display: flex;
   justify-content: space-between;
   padding: 28px 0;
+  padding-bottom: 25px;
 
   @media (min-width: $tablet-width) {
     padding: 62px 40px;
@@ -16,7 +17,7 @@
     z-index: 1;
     background-color: $basic-white;
     top: 95px;
-    padding: 66px 89px 52px 76px;
+    padding: 66px 89px 63px 76px;
   }
 
   &--form {

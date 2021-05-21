@@ -68,10 +68,20 @@
     width: 92px;
     text-align: right;
   }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    width: 45px;
+  }
 }
 
 .additional-item__button {
   @media (min-width: $tablet-width) {
     font-size: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    top: -5px;
   }
 }

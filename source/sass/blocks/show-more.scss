@@ -16,9 +16,6 @@
     flex-direction: column;
     padding: 161px 38px 38px 38px;
     background-image: url("../img/plus-tablet.svg");
-  }
-
-  @media (min-width: $tablet-width) {
     padding-bottom: 40px;
   }
 }

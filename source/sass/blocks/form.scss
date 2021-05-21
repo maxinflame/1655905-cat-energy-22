@@ -139,7 +139,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      padding-bottom: 28px;
+      padding-bottom: 24px;
     }
   }
 }
@@ -335,6 +335,7 @@
 .form__comment-title {
   @media (min-width: $tablet-width) {
     min-width: 197px;
+    margin-bottom: 72px;
   }
 
   @media (min-width: $desktop-width) {
