@@ -112,6 +112,10 @@
     width: 28px;
     height: 33px;
   }
+
+  & * {
+    fill: none;
+  }
 }
 
 .page-footer__copyright-link {

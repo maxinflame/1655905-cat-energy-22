@@ -240,6 +240,10 @@
 
   &--email {
     right: 16px;
+
+    & * {
+      fill: none;
+    }
   }
 
   &--phone {

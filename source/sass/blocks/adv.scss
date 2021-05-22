@@ -26,6 +26,7 @@
     margin-right: auto;
     margin-left: auto;
     background-image: url("../img/gift-icon.svg"), url("../img/gift-photo-tablet.jpg");
+    margin-bottom: 76px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/gift-icon.svg"), url("../img/gift-photo-tablet@2x.jpg");
@@ -39,6 +40,7 @@
     padding: 0;
     padding-top: 185px;
     background-image: url("../img/gift-icon.svg"), url("../img/gift-photo-desktop.jpg");
+    margin: 0;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/gift-icon.svg"), url("../img/gift-photo-desktop@2x.jpg");

@@ -28,6 +28,7 @@
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 13px;
+  margin-left: 1px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -66,5 +67,11 @@
   @media (min-width: $tablet-width) {
     width: 92px;
     text-align: right;
+  }
+}
+
+.additional-item__button {
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
   }
 }

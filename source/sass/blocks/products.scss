@@ -12,6 +12,10 @@
       display: none;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 15px;
+  }
 }
 
 .products__list {
@@ -45,7 +49,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    margin-bottom: 59px;
+    margin-bottom: 68px;
 
     &:not(:nth-child(2n)) {
       margin-right: 60px;
@@ -58,9 +62,16 @@
 
   @media (min-width: $desktop-width) {
     width: 245px;
+    margin-bottom: 62px;
 
     &:not(:nth-child(4n)) {
       margin-right: 80px;
+    }
+  }
+
+  &:last-child {
+    @media (min-width: $tablet-width) {
+      margin-top: 72px;
     }
   }
 }
