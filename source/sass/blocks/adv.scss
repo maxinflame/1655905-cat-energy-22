@@ -1,4 +1,5 @@
 .adv {
+  background-color: $basic-green;
   background-image: url("../img/gift-icon.svg"), url("../img/gift-photo-mobile.jpg");
   background-repeat: no-repeat;
   background-size: 78px 80px, 100% 289px;
@@ -50,7 +51,7 @@
 
 .adv__text {
   color: $basic-white;
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Calibri", sans-serif;
   font-size: 16px;
   line-height: 20px;
   max-width: 161px;

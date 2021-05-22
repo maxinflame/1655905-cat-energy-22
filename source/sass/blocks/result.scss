@@ -48,12 +48,13 @@
 .result__caption {
   text-transform: lowercase;
   background-color: $background-color;
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Calibri", sans-serif;
   font-size: 12px;
   line-height: 12px;
   position: absolute;
   margin: 0;
   bottom: -16px;
+
   @include absolute-center-x;
 
   @media (min-width: $tablet-width) {

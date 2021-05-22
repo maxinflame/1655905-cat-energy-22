@@ -37,6 +37,7 @@
 .products__item {
   min-height: 209px;
   box-sizing: border-box;
+
   @include underline($grey-button-hover);
 
   &::after {

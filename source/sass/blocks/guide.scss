@@ -28,7 +28,7 @@
   counter-reset: guide-counter;
   list-style: none;
   padding: 0;
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Calibri", sans-serif;
   margin: 0;
 
   @media (min-width: $tablet-width) {
@@ -47,7 +47,7 @@
   padding-left: 80px;
   min-height: 60px;
   background-repeat: no-repeat;
-  background-position: 0px center;
+  background-position: 0 center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,7 +55,7 @@
   position: relative;
 
   &:not(:last-child) {
-    @media (max-width: $mobile-width-only){
+    @media (max-width: $mobile-width-only) {
       margin-bottom: 20px;
     }
   }

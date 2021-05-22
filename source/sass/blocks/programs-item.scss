@@ -82,7 +82,7 @@
   margin-left: 71px;
   margin-bottom: 29px;
 
-  @media (min-width: $tablet-width){
+  @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
     margin-left: 0;
@@ -96,7 +96,7 @@
 }
 
 .programs-item__description {
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Calibri", sans-serif;
   padding-bottom: 23px;
   margin: 0 0 15px 0;
   position: relative;
@@ -105,7 +105,7 @@
   @include underline($underline-color);
 
   @media (min-width: $tablet-width) {
-  margin-bottom: 52px;
+    margin-bottom: 52px;
 
     &::after {
       display: none;
@@ -138,6 +138,7 @@
     height: 10px;
     position: absolute;
     right: -47px;
+
     @include absolute-center-y;
   }
 

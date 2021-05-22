@@ -95,7 +95,6 @@
 
     @media (min-width: $desktop-width) {
       width: 568px;
-      padding: 24px 27px;
       box-sizing: border-box;
       padding: 30px 27px;
       padding-bottom: 0;
@@ -219,6 +218,10 @@
     outline: none;
   }
 
+  &--error {
+    border-color: $error-color;
+  }
+
   &--email {
     @media (min-width: $tablet-width) {
       padding-left: 22px;
@@ -234,8 +237,17 @@
   fill: $basic-green;
 }
 
+.form__text-input--error + .form__input-icon--email {
+  stroke: $error-color;
+}
+
+.form__text-input--error + .form__input-icon--phone {
+  fill: $error-color;
+}
+
 .form__input-icon {
   position: absolute;
+
   @include absolute-center-y;
 
   &--email {
@@ -287,6 +299,7 @@
       box-shadow: 0 0 0 7px $basic-white, 0 0 0 8px $special-grey;
       position: absolute;
       left: 8px;
+
       @include absolute-center-y;
     }
 
@@ -310,8 +323,9 @@
       height: 30px;
       border: 1px solid $special-grey;
       position: absolute;
-      @include absolute-center-y;
       left: 0;
+
+      @include absolute-center-y;
 
       @media (min-width: $tablet-width) {
         width: 40px;
@@ -395,7 +409,7 @@
 
 .form__annotation {
   line-height: 16px;
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Calibri", sans-serif;
   text-align: center;
   margin: 0;
 

@@ -12,6 +12,7 @@ const htmlmin = require("gulp-htmlmin");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const del = require("del");
+const terser = require("gulp-terser");
 
 // Style
 
@@ -58,6 +59,18 @@ const html = () => {
 }
 
 exports.html = html;
+
+// Scripts
+
+const scripts = () => {
+  return gulp.src("source/js/script.js")
+    .pipe(terser())
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
+}
+
+exports.scripts = scripts;
 
 // Sprite
 
@@ -123,11 +136,19 @@ const server = (done) => {
 
 exports.server = server;
 
+// Reload
+
+const reload = (done) => {
+  sync.reload();
+  done();
+}
+
 // Watcher
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/js/script.js", gulp.series(scripts));
+  gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
 exports.default = gulp.series(
@@ -144,6 +165,7 @@ const build = gulp.series(
     styles,
     html,
     sprite,
+    scripts,
     createWebp
   ),
 );
@@ -160,10 +182,10 @@ exports.default = gulp.series(
     styles,
     html,
     sprite,
+    scripts,
     createWebp
   ),
   gulp.series(
     server,
     watcher
   ));
-

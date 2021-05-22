@@ -82,14 +82,14 @@
   top: -12px;
   background-color: $basic-green;
   border: 12px solid $basic-white;
-  box-shadow: 0 0 0 1px $special-grey, 0px 1px 3px 0px $slider-toggle-shadow-color;
+  box-shadow: 0 0 0 1px $special-grey, 0 1px 3px 0 $slider-toggle-shadow-color;
 
   &:hover {
-    box-shadow: 0 0 0 1px $special-grey, 0px 2px 4px 0px $slider-toggle-shadow-color;
+    box-shadow: 0 0 0 1px $special-grey, 0 2px 4px 0 $slider-toggle-shadow-color;
   }
 
   &:active {
-    box-shadow: 0 0 0 1px $basic-green, 0px 3px 5px 0px $slider-toggle-shadow-color;
+    box-shadow: 0 0 0 1px $basic-green, 0 3px 5px 0 $slider-toggle-shadow-color;
   }
 
   @media (max-width: $mobile-width-only) {

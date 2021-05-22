@@ -30,7 +30,7 @@
     font-size: 36px;
     line-height: 36px;
     padding-left: 36px;
-    margin-left: 0px;
+    margin-left: 0;
     margin-bottom: 80px;
     max-width: 352px;
   }
@@ -45,6 +45,7 @@
   list-style: none;
   padding: 0;
   margin-bottom: 39px;
+
   @include underline($special-grey);
 
   &::after {

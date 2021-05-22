@@ -45,6 +45,7 @@
     "node": "14.15.0"
   },
   "dependencies": {
+    "gulp-terser": "^2.0.1",
     "gulp-webp": "^4.0.1"
   }
 }
