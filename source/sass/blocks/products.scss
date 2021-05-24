@@ -37,6 +37,7 @@
 .products__item {
   min-height: 209px;
   box-sizing: border-box;
+
   @include underline($grey-button-hover);
 
   &::after {
@@ -71,7 +72,7 @@
 
   &:last-child {
     @media (min-width: $tablet-width) {
-      margin-top: 72px;
+      margin-top: 78px;
     }
   }
 }

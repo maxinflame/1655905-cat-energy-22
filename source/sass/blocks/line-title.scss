@@ -16,7 +16,7 @@
     height: 2px;
     background-color: $basic-green;
     position: absolute;
-    top: 13px;
+    top: 16px;
     z-index: -1;
   }
 
@@ -29,18 +29,18 @@
     margin-bottom: 63px;
 
     &::after {
-      top: 18px;
+      top: 22px;
     }
 
     &::before {
-    content: "";
-    width: 100vw;
-    height: 2px;
-    background-color: $basic-green;
-    position: absolute;
-    top: 18px;
-    left: -100vw;
-    z-index: -1;
+      content: "";
+      width: 100vw;
+      height: 2px;
+      background-color: $basic-green;
+      position: absolute;
+      top: 22px;
+      left: -100vw;
+      z-index: -1;
     }
   }
 }
