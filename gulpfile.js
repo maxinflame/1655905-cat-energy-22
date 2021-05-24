@@ -174,18 +174,23 @@ exports.build = build;
 
 // Default
 
-exports.default = gulp.series(
-  clean,
-  copy,
-  copyImages,
-  gulp.parallel(
-    styles,
-    html,
-    sprite,
-    scripts,
-    createWebp
-  ),
-  gulp.series(
-    server,
-    watcher
-  ));
+// exports.default = gulp.series(
+//   clean,
+//   copy,
+//   copyImages,
+//   gulp.parallel(
+//     styles,
+//     html,
+//     sprite,
+//     scripts,
+//     createWebp
+//   ),
+//   gulp.series(
+//     server,
+//     watcher
+//   ));
+
+  exports.default = gulp.series(
+    build,
+    server
+  );

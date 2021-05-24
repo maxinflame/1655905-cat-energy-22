@@ -8,15 +8,25 @@
   }
 
   @media (min-width: $desktop-width) {
-    background: url("../img/index-background-desktop.jpg") no-repeat right top, linear-gradient(to left, #64a83c 50%, transparent 50%, transparent) no-repeat;
+    padding-bottom: 190px;
+  }
+}
+
+.promo__background-wrapper {
+  @media (min-width: $desktop-width) {
+    width: 50vw;
     height: 696px;
+    position: absolute;
+    right: 0;
+    background: url("../img/index-background-desktop.jpg") no-repeat left top, linear-gradient(to left, #64a83c 50%, transparent 50%, transparent) no-repeat;
 
     @media (min-resolution: 2dppx) {
-      background: url("../img/index-background-desktop@2x.jpg") no-repeat right top;
+      background: url("../img/index-background-desktop@2x.jpg") no-repeat left top;
       background-size: 50% 696px;
-      height: 696px;
     }
   }
+
+
 }
 
 .promo__wrapper {
@@ -46,6 +56,7 @@
     padding-top: 222px;
     padding-left: 80px;
     text-align: left;
+    min-height: 0;
   }
 }
 
